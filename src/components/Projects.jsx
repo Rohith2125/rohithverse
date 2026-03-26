@@ -7,18 +7,18 @@ const projects = [
     description: "Full-stack platform enabling startups to post real-world problems and developers to submit MVP solutions to compete for prize pools or hiring opportunities.",
     achievement: "LLM-powered evaluation pipeline using Llama 70B to automatically score submissions based on product design, system architecture, and implementation quality.",
     tech: ["React.js", "Python", "FastAPI", "Supabase", "Llama 70B"],
-    live: "#",
-    github: "#",
-    image: "https://real-devs-tau.vercel.app/"
+    live: "https://real-devs-tau.vercel.app/",
+    github: "https://github.com/Rohith2125/Real-devs",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop"
   },
   {
     title: "Gym Management System",
     description: "Full-stack web application for managing memberships, payments, and daily logs with admin dashboard for analytics and real-time membership tracking.",
     achievement: "Integrated Razorpay for secure digital payments with real-time analytics and dashboard visualization.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "Razorpay"],
-    live: "#",
-    github: "#",
-    image: "https://gymbro-w1qp.onrender.com/"
+    live: "https://gymbro-w1qp.onrender.com/",
+    github: "https://github.com/Rohith2125/GymBro-an-gym-management-software",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
   }
 ];
 
@@ -42,10 +42,22 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <a href={project.live} className="p-3 bg-white text-[#3B82F6] rounded-full hover:bg-[#3B82F6] hover:text-white transition-all transform hover:scale-110">
+                  <a 
+                    href={project.live} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3 bg-white text-[#3B82F6] rounded-full hover:bg-[#3B82F6] hover:text-white transition-all transform hover:scale-110"
+                    aria-label="View Live Project"
+                  >
                     <HiExternalLink className="w-6 h-6" />
                   </a>
-                  <a href={project.github} className="p-3 bg-white text-[#3B82F6] rounded-full hover:bg-[#3B82F6] hover:text-white transition-all transform hover:scale-110">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="p-3 bg-white text-[#3B82F6] rounded-full hover:bg-[#3B82F6] hover:text-white transition-all transform hover:scale-110"
+                    aria-label="View Source Code"
+                  >
                     <HiCode className="w-6 h-6" />
                   </a>
                 </div>

@@ -6,18 +6,18 @@ const educationData = [
     institution: "TKR College of Engineering & Technology (JNTUH)",
     degree: "B.Tech (CSE - AIML)",
     duration: "2021 - 2025",
-    metric: "CGPA: 6.7/10",
+    // metric: "CGPA: 6.7/10",
     isCurrent: true,
-    description: "Specializing in Artificial Intelligence and Machine Learning with a focus on building web applications using modern technologies.",
+    // description: "Specializing in Artificial Intelligence and Machine Learning with a focus on building web applications using modern technologies.",
     color: 'emerald'
   },
   {
     institution: "Narayana Junior College, Hyderabad",
     degree: "Intermediate Education (MPC)",
     duration: "2019 - 2021",
-    metric: "Marks: 898/1000",
+    // metric: "Marks: 898/1000",
     isCurrent: false,
-    description: "Completed higher secondary education with major in Mathematics, Physics and Chemistry.",
+    // description: "Completed higher secondary education with major in Mathematics, Physics and Chemistry.",
     color: 'blue'
   }
 ];
@@ -112,7 +112,7 @@ const Education = () => {
                  </div>
                  <h4 className="text-xl font-bold dark:text-gray-100 mb-3">Continuous Learning</h4>
                  <p className="text-gray-500 dark:text-gray-400 text-sm max-w-xs leading-relaxed">
-                   Currently exploring LLM orchestration frameworks and advanced vector database optimizations.
+                  currently exploring LLM orchestration frameworks and agentic AI
                  </p>
               </div>
             </div>

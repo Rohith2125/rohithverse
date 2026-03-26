@@ -21,14 +21,14 @@ const Contact = () => {
     {
       name: 'LinkedIn',
       value: 'Muddasani Rohith',
-      href: '#', // TODO: Add URI
+      href: 'https://www.linkedin.com/in/rohith-roh/', 
       icon: FaLinkedin,
       color: 'blue'
     },
     {
       name: 'GitHub',
-      value: 'roh8',
-      href: '#', // TODO: Add URI
+      value: 'rohith2125',
+      href: 'https://github.com/Rohith2125', 
       icon: FaGithub,
       color: 'gray'
     }
@@ -48,6 +48,8 @@ const Contact = () => {
             <a
               key={index}
               href={link.href}
+              target={link.href.startsWith('http') ? "_blank" : undefined}
+              rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
               className="card group flex flex-col items-center justify-center p-10 hover:border-[#3B82F6] transition-all duration-300"
             >
               <div className="p-4 bg-gray-50 dark:bg-[#0f172a] rounded-2xl mb-6 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/40 text-gray-600 dark:text-gray-400 group-hover:text-[#3B82F6] transition-all duration-300 group-hover:scale-110">

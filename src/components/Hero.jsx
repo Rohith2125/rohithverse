@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center text-gray-400 dark:text-gray-500">
+      <div className="absolute bottom-10 left-0 right-0 animate-bounce flex flex-col items-center text-gray-400 dark:text-gray-500 pointer-events-none">
         <span className="text-xs uppercase tracking-widest mb-2 font-medium">Explore</span>
         <HiArrowNarrowDown className="w-5 h-5 text-[#3B82F6]" />
       </div>

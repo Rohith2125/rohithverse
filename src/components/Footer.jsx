@@ -25,22 +25,24 @@ const Footer = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           {socialIcons.map((social, index) => (
             <a
               key={index}
               href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-[#1F2937] border border-gray-100 dark:border-gray-800 rounded-full text-[#6B7280] dark:text-gray-400 hover:text-[#3B82F6] dark:hover:text-blue-400 hover:border-[#3B82F6] hover:shadow-lg transition-all transform hover:scale-110 active:scale-95 duration-300"
               aria-label={social.label}
             >
               <social.icon className="w-5 h-5" />
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* Attribution */}
         <div className="text-gray-400 dark:text-gray-500 text-xs font-semibold uppercase tracking-widest text-center md:text-right">
-          Built with <span className="text-[#3B82F6] inline-block hover:animate-ping hover:text-red-500 transition-all font-bold cursor-help mx-0.5">♥</span> in React & Tailwind
+          Built with <span className="text-[#3B82F6] inline-block hover:animate-ping hover:text-red-500 transition-all font-bold cursor-help mx-0.5">♥</span> Purpose
         </div>
       </div>
     </footer>

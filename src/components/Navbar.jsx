@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { HiMenu, HiX, HiMoon, HiSun } from 'react-icons/hi';
+import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +12,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
-  };
 
   const navLinks = [
     { name: 'Skills', href: '#skills' },
@@ -46,27 +40,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-[#1F2937] text-gray-600 dark:text-gray-300 hover:text-[#3B82F6] dark:hover:text-blue-400 transition-colors duration-200"
-              aria-label="Toggle Dark Mode"
-            >
-              {isDark ? <HiSun className="w-6 h-6" /> : <HiMoon className="w-6 h-6" />}
-            </button>
-            <a href="#contact" className="px-5 py-2.5 bg-[#3B82F6] text-white rounded-lg font-semibold hover:bg-[#2563EB] transition-all duration-300 hover:scale-105">
-              Hire Me
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-[#1F2937] text-gray-600 dark:text-gray-300 transition-colors duration-200"
-              aria-label="Toggle Dark Mode"
-            >
-              {isDark ? <HiSun className="w-5 h-5" /> : <HiMoon className="w-5 h-5" />}
-            </button>
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-gray-100 dark:bg-[#1F2937] text-gray-600 dark:text-gray-300 hover:text-[#3B82F6] dark:hover:text-blue-400 transition-colors duration-200 focus:outline-none"
@@ -91,13 +68,6 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="block w-full py-3 text-center bg-[#3B82F6] text-white rounded-lg font-bold hover:bg-[#2563EB] transition-all duration-300"
-            onClick={() => setIsOpen(false)}
-          >
-            Get In Touch
-          </a>
         </div>
       </div>
     </nav>
