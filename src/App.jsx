@@ -9,12 +9,12 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#111827] transition-colors duration-300">
+    <div className="min-h-screen bg-black transition-colors duration-300">
       <Navbar />
       <main>
         <Hero />
-        <Skills />
         <Projects />
+        <Skills />
         <Education />
         <Contact />
       </main>

@@ -5,31 +5,32 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #000000;
   }
   body {
-    @apply antialiased bg-white dark:bg-[#111827] text-[#1F2937] dark:text-[#F3F4F6] transition-colors duration-300;
+    @apply antialiased bg-[#000000] text-gray-300;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-[#1F2937] dark:text-[#F3F4F6];
+    @apply font-bold text-white;
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16;
   }
   
   .btn-primary {
-    @apply px-8 py-3 bg-[#3B82F6] text-white rounded-lg font-semibold hover:bg-[#2563EB] transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg;
+    @apply px-8 py-3 bg-neon-green text-black rounded-lg font-bold hover:bg-[#2EE612] transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(57,255,20,0.4)] hover:shadow-[0_0_25px_rgba(57,255,20,0.7)];
   }
   
   .btn-secondary {
-    @apply px-8 py-3 border-2 border-[#3B82F6] text-[#3B82F6] dark:text-blue-400 dark:border-blue-400 rounded-lg font-semibold hover:bg-[#3B82F6] hover:text-white transition-all duration-300 hover:scale-105 active:scale-95 shadow-sm hover:shadow-md;
+    @apply px-8 py-3 border-2 border-neon-green text-neon-green rounded-lg font-bold hover:bg-neon-green hover:text-black transition-all duration-300 hover:scale-105 active:scale-95;
   }
 
   .card {
-    @apply bg-white dark:bg-[#1F2937] border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300;
+    @apply bg-dark-card border border-gray-900 rounded-xl p-6 shadow-sm hover:shadow-2xl hover:border-neon-green/40 transition-all duration-300;
   }
 }
 
@@ -64,4 +65,19 @@
 }
 ::-webkit-scrollbar-thumb {
   @apply bg-blue-500 rounded-full hover:bg-blue-600;
+}
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
 }

@@ -1,60 +1,91 @@
 import React from 'react';
-import icon from '../assets/images/icon.jpg';
-import avatar from '../assets/images/avatar.png';
-import { HiArrowNarrowDown } from 'react-icons/hi';
+import rohith from '../assets/images/rohith.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
-      {/* Background Decorative Elements */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-blue-400 opacity-10 rounded-full blur-[100px] pointer-events-none"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 opacity-10 rounded-full blur-[120px] pointer-events-none"></div>
-
-      <div className="section-container text-center z-10">
-        {/* Avatar */}
-        <div className="mb-8 animate-fadeInUp">
-          <div className="relative inline-block p-1 bg-gradient-to-tr from-[#3B82F6] to-[#8B5CF6] rounded-full shadow-2xl">
-            <img 
-              src={icon} 
-              alt="Muddasani Rohith" 
-              className="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover border-4 border-white dark:border-[#1F2937]"
-            />
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-[#3B82F6] dark:text-blue-400 font-semibold tracking-wide uppercase text-sm sm:text-base animate-fadeInUp stagger-1">
-            Hi, I'm
-          </h2>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-2 animate-fadeInUp stagger-2">
-            Muddasani Rohith
-          </h1>
-          <h2 className="text-2xl sm:text-4xl text-[#6B7280] dark:text-gray-400 font-medium animate-fadeInUp stagger-3">
-            Full-Stack Developer
-          </h2>
-          <p className="text-lg sm:text-xl text-[#6B7280] dark:text-gray-400 max-w-2xl mx-auto animate-fadeInUp stagger-4 leading-relaxed">
-            Building scalable MERN and Python-based AI-integrated products for startups.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-8 animate-fadeInUp stagger-5">
-            <a href="#projects" className="btn-primary w-full sm:w-auto">
-              View My Work
-            </a>
-            <a href="#contact" className="btn-secondary w-full sm:w-auto">
-              Get In Touch
-            </a>
-          </div>
-        </div>
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-black">
+      {/* Background Grid & Blobs */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/4 -left-20 w-[400px] h-[400px] bg-neon-green/10 rounded-full blur-[100px] animate-pulse-slow"></div>
+        <div className="absolute bottom-1/4 -right-20 w-[400px] h-[400px] bg-white/5 rounded-full blur-[120px] animate-pulse-slow delay-1000"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-0 right-0 animate-bounce flex flex-col items-center text-gray-400 dark:text-gray-500 pointer-events-none">
-        <span className="text-xs uppercase tracking-widest mb-2 font-medium">Explore</span>
-        <HiArrowNarrowDown className="w-5 h-5 text-[#3B82F6]" />
+      <div className="section-container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Text Content */}
+        <div className="flex flex-col space-y-6 text-left order-2 lg:order-1">
+          <div className="animate-fadeInUp stagger-1">
+            <span className="px-4 py-1.5 rounded-full bg-neon-green/10 text-neon-green text-xs font-black uppercase tracking-[0.4em] border border-neon-green/20">
+              Full-Stack Developer
+            </span>
+          </div>
+
+          <div className="animate-fadeInUp stagger-2">
+            <h1 className="text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter text-white leading-[0.9]">
+              Engineering <br />
+              <span className="text-neon-green inline-block transform hover:skew-x-6 transition-transform">Digital</span> <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-gray-500 italic">Future.</span>
+            </h1>
+          </div>
+
+          <div className="animate-fadeInUp stagger-3">
+             <p className="text-lg md:text-xl text-gray-400 max-w-lg leading-relaxed font-medium">
+              I'm <span className="text-white font-bold">Muddasani Rohith</span>. 
+              Creating high-impact MERN & AI solutions with a flare of <span className="text-white font-bold uppercase tracking-widest text-xs border-b border-white/40">Innovation</span>.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-10 animate-fadeInUp stagger-4">
+            <a href="#projects" className="btn-primary group w-full sm:w-auto px-10 py-4 text-sm font-black tracking-[0.2em] flex items-center justify-center gap-3">
+              VIEW WORK
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a href="#contact" className="btn-secondary group w-full sm:w-auto px-10 py-4 text-sm font-black tracking-[0.2em] flex items-center justify-center gap-3 border-white/20 text-white hover:border-neon-green hover:text-neon-green bg-white/5 backdrop-blur-sm">
+              GET IN TOUCH
+            </a>
+          </div>
+        </div>
+
+        {/* Hero Image Section */}
+        <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end animate-fadeInUp stagger-2">
+          <div className="relative group">
+            {/* Glowing Aura */}
+            <div className="absolute -inset-6 bg-neon-green opacity-20 rounded-[4rem] blur-[50px] group-hover:opacity-40 transition-opacity duration-700"></div>
+            
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[420px] md:h-[420px] bg-dark-card rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl transition-all duration-500">
+               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10"></div>
+               <img 
+                 src={rohith} 
+                 alt="Muddasani Rohith" 
+                 className="w-full h-[calc(100%+9px)] object-cover object-top transition-all duration-700"
+               />
+               
+               {/* Floating Overlay Info */}
+               {/* <div className="absolute top-10 right-10 z-20 hidden md:block">
+                  <div className="p-4 bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl rotate-6 group-hover:rotate-0 transition-transform duration-500">
+                    <span className="text-neon-green font-black text-xl leading-none">50+</span>
+                    <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-1">Components</p>
+                  </div>
+               </div> */}
+               
+               <div className="absolute bottom-10 left-10 z-20">
+                  <h3 className="text-white font-black text-3xl md:text-4xl uppercase tracking-tighter shadow-black drop-shadow-md">
+                    ROHITH<span className="text-neon-green">.</span>
+                  </h3>
+                  {/* <p className="text-deep-blue font-bold text-[10px] uppercase tracking-[0.3em] mt-1">Available for Hire</p> */}
+               </div>
+            </div>
+
+            {/* Neon Elements */}
+            <div className="absolute -top-5 -left-5 w-20 h-20 border-t-4 border-l-4 border-neon-green rounded-tl-3xl opacity-50 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+            <div className="absolute -bottom-5 -right-5 w-20 h-20 border-b-4 border-r-4 border-white rounded-br-3xl opacity-50 group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-500"></div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Hero;
+
+
